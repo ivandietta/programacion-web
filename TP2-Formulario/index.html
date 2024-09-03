@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Iván Dietta">
+        <title>TP2 - Programación web</title>
+    </head>
+    <body>
+        <h2>Registro de Tienda</h2>
+        <fieldset id="form" name="form">
+            <form action="/submit_form" method="post">
+                <p>
+                    <label for="name"><b>Nombre de usuario</b></label><br>
+                    <input type="text" id="name" name="name" placeholder="Ej: luis" required>
+                </p>
+                
+                <p>
+                    <label for="name"><b>Email</b></label><br>
+                    <input type="text" id="name" name="name" placeholder="Ej: luis@gmail.com" required>
+                </p>
+        
+                <p>
+                    <label for="name"><b>Edad</b></label><br>
+                    <input type="text" id="name" name="name" placeholder="Ej: 21" required>
+                </p>
+    
+                <p>
+                    <label><b>Género</b></label><br>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Masculino</label><br>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Femenino</label><br>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Otro</label>
+                </p>
+    
+                <p>
+                    <label for="gender"><b>Recomendado por</b></label><br>
+                    <select id="gender" name="gender" required>
+                        <option value="male">Google</option>
+                        <option value="female">Amigos</option>
+                        <option value="other">Redes sociales</option>
+                    </select>
+                </p>
+    
+                <p>
+                    <label for="comments"><b>Comentarios</b></label><br>
+                    <textarea id="comments" name="comments" placeholder="Deje sus comentarios aquí" rows="4" cols="50"></textarea>   
+                </p>
+    
+                <p>
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms"><b>Acepto los términos y condiciones</b></label>
+                </p>
+        
+                <input type="submit" value="Registrarse">
+            </form>
+        </fieldset>
+    </body>
+</html>
