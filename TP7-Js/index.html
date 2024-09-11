@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Iván Dietta">
+    <title>TP7 - Programación web</title>
+    <style>
+        .inline-input {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        input[type="text"], input[type="date"] {
+            border: none;
+            border-bottom: 1px solid gray;
+            outline: none;
+            padding: 5px;
+        }
+        input[type="text"]::placeholder, input[type="date"]::placeholder {
+            color: lightgray;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="formulario">
+        <p>
+            <span class="inline-input">NOMBRE:</span>
+            <input type="text" id="nombre" placeholder="Nombre" class="inline-input">
+        </p>
+        <p>
+            <span class="inline-input">APELLIDO:</span>
+            <input type="text" id="apellido" placeholder="Apellido" class="inline-input">
+        </p>
+        <p>
+            <span class="inline-input">FECHA DE NACIMIENTO:</span>
+            <input type="date" class="fecha inline-input">
+        </p>
+        <p>
+            <span class="inline-input">DIRECCION:</span>
+            <input type="text" class="direccion inline-input" placeholder="Dirección">
+        </p>
+        <p>
+            <span class="inline-input">DNI:</span>
+            <input type="text" class="dni inline-input" placeholder="DNI">
+        </p>
+    </form>
+
+    <button id="completarNombre" onclick="completarNombreYApellido()">Completar nombre</button>
+
+    <button onclick="completarDatosDNI()" class="completar-datos">Completar dni</button>
+
+    <button onclick="generarSexo()">Sexo</button>
+
+    <button onclick="crearTitulo()">TITULO</button>
+    <button onclick="borrarTitulo()">Borrar TITULO</button>
+
+    <div id="resultado"></div>
+    
+    <script>
+
+        function completarNombreYApellido() {
+            document.getElementById("nombre").value = "Iván";
+            document.getElementById("apellido").value = "Dietta";
+        }
+
+        function completarDatosDNI() {
+            const fechaNacimiento = document.getElementsByClassName("fecha")[0];
+            const direccion = document.getElementsByClassName("direccion")[0];
+            const dni = document.getElementsByClassName("dni")[0];
+
+            fechaNacimiento.value = "2002-04-30";
+            direccion.value = "Calle Falsa 123";
+            dni.value = "12345678";
+        }
+
+        function generarSexo() {
+            if(!document.getElementById("grupo-sexo")){
+                const p = document.createElement("p");
+                p.id = "grupo-sexo";
+                const radioFemenino = document.createElement("input");
+                radioFemenino.type = "radio";
+                radioFemenino.name = "sexo";
+                radioFemenino.value = "femenino";
+                const labelFemenino = document.createTextNode("Femenino");
+
+                const radioMasculino = document.createElement("input");
+                radioMasculino.type = "radio";
+                radioMasculino.name = "sexo";
+                radioMasculino.value = "masculino";
+                const labelMasculino = document.createTextNode("Masculino");
+
+                p.appendChild(radioFemenino);
+                p.appendChild(labelFemenino);
+                p.appendChild(radioMasculino);
+                p.appendChild(labelMasculino);
+
+                document.getElementById("resultado").appendChild(p);
+            }
+        }
+
+        function crearTitulo() {
+            const h1 = document.createElement("h1");
+            h1.id = "titulo";
+            h1.innerHTML = "DATOS PERSONALES";
+            document.body.appendChild(h1);
+        }
+
+        function borrarTitulo() {
+            const titulo = document.getElementById("titulo");
+            if (titulo) {
+                document.body.removeChild(titulo);
+            }
+        }
+    </script>
+
+</body>
+</html>
