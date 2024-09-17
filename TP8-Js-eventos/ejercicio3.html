@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Iván Dietta">
+    <title>TP8 - Ej3 - Programación web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9e9e9;
+            padding: 20px;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label>Nombres: <input type="text"></label><br>
+        <label>Apellidos: <input type="text"></label><br>
+        <label>Email: <input type="email"></label><br>
+        <label>Comentario: <textarea></textarea></label><br>
+        <button type="button" onclick="contarElementos()">Contar Elementos</button>
+    </form>
+
+    <script>
+        function contarElementos() {
+            var inputs = document.getElementsByTagName('input').length;
+            var labels = document.getElementsByTagName('label').length;
+            var ps = document.getElementsByTagName('p').length;
+            alert("Inputs: " + inputs + "\nLabels: " + labels + "\nPárrafos: " + ps);
+        }
+    </script>
+</body>
+</html>

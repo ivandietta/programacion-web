@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Iván Dietta">
+    <title>Objetos</title>
+</head>
+
+<body>
+
+    <script>
+        var persona = {
+            nombre: "Iván",
+            edad: 22,
+            moto:{
+                modelo:2020,
+                marca:"honda"
+            },
+            mostrarnombre: function(){
+                alert('Me llamo ' + this.nombre);
+            },
+            cambiarnombre: function(nuevo){
+                this.nombre=nuevo;
+            }
+            
+        }
+        console.log(persona.nombre);
+        console.log(persona.cambiarnombre("James"));
+        console.log(persona.mostrarnombre());
+
+    </script>
+</body>
+</html>

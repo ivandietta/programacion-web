@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Jesica Hainch">
+    <meta name="author" content="Iván Dietta">
     <title>Métodos del DOM</title>
 </head>
 
@@ -111,6 +111,13 @@
         function contarForms(){
             var elementos = document.getElementsByTagName('form'); 
             alert('La cantidad de Forms es ' + elementos.length);
+        }
+        function CambiarInput(){
+            var elemento = document.getElementById('idP');
+            elemento.innerHTML="Texto cambiado";
+
+            elemento.setAttribute('style','background-color:violet');
+
         }
     </script>
 </body>

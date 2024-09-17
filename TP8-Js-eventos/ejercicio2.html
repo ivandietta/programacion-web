@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Iván Dietta">
+    <title>TP8 - Ej2 - Programación web</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+
+        label {
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        input {
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #008CBA;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005f75;
+        }
+    </style>
+</head>
+<body>
+    <p id="parrafo">Este es un párrafo.</p>
+    <label id="etiqueta">Nombre:</label>
+    <input type="text" id="campoNombre">
+
+    <button onclick="mostrarElementos()">Mostrar Elementos</button>
+
+    <script>
+        function mostrarElementos() {
+            var parrafo = document.getElementById('parrafo');
+            var etiqueta = document.getElementById('etiqueta');
+            var campo = document.getElementById('campoNombre');
+            alert(parrafo.innerText + "\n" + etiqueta.innerText + "\n" + "Campo: " + campo.value);
+        }
+    </script>
+</body>
+</html>

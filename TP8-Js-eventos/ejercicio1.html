@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Iván Dietta">
+    <title>TP8 - Ej1 - Programación web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        a {
+            color: blue;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        a:hover {
+            color: darkblue;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://www.google.com">Google</a>
+    <a href="https://www.facebook.com">Facebook</a>
+    <a href="https://www.twitter.com">Twitter</a>
+    <a href="https://www.youtube.com">YouTube</a>
+
+    <button onclick="contarEnlaces()">Contar Enlaces</button>
+
+    <script>
+        function contarEnlaces() {
+            var enlaces = document.getElementsByTagName('a');
+            alert("Número de enlaces: " + enlaces.length);
+        }
+    </script>
+
+</body>
+</html>

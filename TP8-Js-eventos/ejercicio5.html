@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Iván Dietta">
+    <title>TP8 - Ej5 - Programación web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo">Registro de Estudiantes</h1>
+    <form>
+        <label>Nombres: <input type="text" id="nombres"></label><br>
+        <label>Apellidos: <input type="text" id="apellidos"></label><br>
+        <label>Dirección: <input type="text" id="direccion"></label><br>
+        <label>Edad: <input type="number" id="edad"></label><br>
+        <label>Fecha de Nacimiento: <input type="date" id="fechaNacimiento"></label><br>
+        <label>Lugar de Nacimiento: <input type="text" id="lugarNacimiento"></label><br>
+        <label>Estado Civil: <input type="text" id="estadoCivil"></label><br>
+    </form>
+    <button onclick="registrarAlumno()">Registrar Alumno</button>
+    <button onclick="cambiarTitulo()">Cambiar Título</button>
+    <button onclick="cambiarColor()">Cambiar Color</button>
+
+    <script>
+        function registrarAlumno() {
+            alert("Alumno registrado!");
+        }
+
+        function cambiarTitulo() {
+            document.getElementById('titulo').innerText = "Registro de Docentes";
+        }
+
+        function cambiarColor() {
+            document.body.style.color = "red";
+        }
+    </script>
+</body>
+</html>

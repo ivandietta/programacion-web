@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Iván Dietta">
+    <title>Eventos del DOM</title>
+</head>
+
+<body>
+    <button id="idButton">Enviar</button>
+    <button id="Button1">Saludar</button>
+    <button id="Button2">Saludar + Nombre</button>
+    <script>
+        document.getElementById("idButton").addEventListener("click",function(){
+            alert("EventListener")
+        });
+        document.getElementById("Button1").addEventListener("click",function(){
+            mostrarMensaje1();
+        });
+        document.getElementById("Button1").addEventListener("mouseup",function(){
+            mostrarMensaje2();
+        });
+        function mostrarMensaje1(){
+            alert("Holaaa");
+        }
+        function mostrarMensaje2(){
+            alert("Chauu");
+        }
+        document.getElementById("Button2").addEventListener("click",function(){
+            mostrarMensaje3("Iván");
+        });
+        function mostrarMensaje3(nombre){
+            alert("Hola "+ nombre);
+        }
+    </script>
+</body>
